@@ -1,0 +1,28 @@
+// What is the product name, product ID and price of most expensive product in the product table?
+SELECT ProductDescription, ProductID, ProductStandardPrice
+FROM Product_T
+WHERE ProductStandardPrice = (
+  SELECT MAX(ProductStandardPrice)
+  FROM Product_T
+);
+
+// Which orders have been placed since October 20, 2010?
+SELECT * FROM Order_T
+WHERE OrderDate > '2010-10-20';
+
+// List the product name, standard price, and finish for all tables that cost more than $300 and all desks that cost more than $300.
+SELECT ProductDescription, ProductStandardPrice, ProductFinish
+FROM Product_T
+WHERE ProductStandardPrice > 300
+	AND (ProductDescription LIKE '%Desk%'
+	OR ProductDescription LIKE '%Table%');
+  
+// Provide a listing of the unique product IDs for the products in the Order Line table.
+SELECT DISTINCT ProductID FROM OrderLine_T;
+  
+  
+  
+  
+  
+  
+  
