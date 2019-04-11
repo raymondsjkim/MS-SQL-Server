@@ -14,16 +14,16 @@ CREATE TABLE Order_T (
 );
 
 CREATE TABLE Product_T (
-	ProductID			INT NOT NULL IDENTITY PRIMARY KEY,
-	ProductDescription		varchar(50) NOT NULL,
-	ProductFinish			varchar(50) NOT NULL,
+	ProductID		INT NOT NULL IDENTITY PRIMARY KEY,
+	ProductDescription	varchar(50) NOT NULL,
+	ProductFinish		varchar(50) NOT NULL,
 	ProductStandardPrice	decimal(38,2) NOT NULL,
-	ProductLineID			INT NOT NULL,
+	ProductLineID		INT NOT NULL,
 );
 
 CREATE TABLE OrderLine_T(
-	OrderID				INT NOT NULL,
-	ProductID			INT NOT NULL,
+	OrderID			INT NOT NULL,
+	ProductID		INT NOT NULL,
 	OrderedQuantity		INT NOT NULL,
 	PRIMARY KEY (OrderID, ProductID)
 );
