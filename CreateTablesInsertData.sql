@@ -1,5 +1,5 @@
 CREATE TABLE Customer_T (
-	CustomerID			INT NOT NULL IDENTITY PRIMARY KEY,
+	CustomerID		INT NOT NULL IDENTITY PRIMARY KEY,
 	CustomerName		varchar(50),
 	CustomerAddress		varchar(50) NOT NULL,
 	CustomerCity		varchar(50) NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE Order_T (
 );
 
 CREATE TABLE Product_T (
-	ProductID				INT NOT NULL IDENTITY PRIMARY KEY,
+	ProductID			INT NOT NULL IDENTITY PRIMARY KEY,
 	ProductDescription		varchar(50) NOT NULL,
 	ProductFinish			varchar(50) NOT NULL,
 	ProductStandardPrice	decimal(38,2) NOT NULL,
